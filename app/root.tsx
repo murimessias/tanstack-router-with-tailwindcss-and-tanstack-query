@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom/client'
 import { routeTree } from '../types/route-tree.gen.ts'
 import reportWebVitals from './reportWebVitals.ts'
 
-import '#app/styles/global.css'
+import '#app/styles/tailwind.css'
 
 const router = createRouter({
 	routeTree,
