@@ -39,6 +39,28 @@ jobs:
       - name: 🔬 Lint
         run: npm run lint
 
+  playwright:
+    name: 🎭 Playwright
+    runs-on: ubuntu-22.04
+    timeout-minutes: 60
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v4
+
+      - name: 🏄 Copy test env vars
+        run: cp .env.example .env
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
+
+      - name: 📥 Install Playwright Browsers
+        run: npm run test:e2e:install
+
   typecheck:
     name: ʦ TypeScript
     runs-on: ubuntu-22.04

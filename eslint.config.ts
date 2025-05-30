@@ -30,6 +30,8 @@ export default defineConfig([
 		'dist',
 		'build',
 		'public',
+		'coverage',
+		'/playwright-report',
 		'**/types/route-tree.gen.ts',
 	]),
 ])
