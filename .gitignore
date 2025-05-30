@@ -1,5 +1,13 @@
 node_modules
-.DS_Store
-dist
-dist-ssr
-*.local
+.DS_store
+
+/build
+/dist
+.env
+.cache
+
+/test-results/
+/coverage
+
+# Easy way to create temporary files/folders that won't accidentally be added to git
+*.local.*
